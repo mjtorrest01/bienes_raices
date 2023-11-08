@@ -1,12 +1,12 @@
 {
-  "name": "bienesraices",
+  "name": "bienes_raices",
   "version": "1.0.0",
-  "description": "Curso Desarrollo Web Completo",
+  "description": "Desarrollo web completo con PHP",
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp"
   },
-  "author": "Juan De La Torre",
+  "author": "Michael Torres",
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^5.1.0",
@@ -25,5 +25,21 @@
     "gulp-webp": "^4.0.1",
     "sass": "^1.49.9",
     "terser": "^4.8.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjtorrest01/bienes_raices.git"
+  },
+  "keywords": [
+    "PHP",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "SASS",
+    "GULP"
+  ],
+  "bugs": {
+    "url": "https://github.com/mjtorrest01/bienes_raices/issues"
+  },
+  "homepage": "https://github.com/mjtorrest01/bienes_raices#readme"
 }
