@@ -1,0 +1,42 @@
+.cart{
+    @include tablet {
+        @include grid(2, 4rem);
+        margin-top: -15rem;
+    }
+
+    margin-top: -8rem;
+    
+}
+
+.cart-contenedor{
+    background-color: $azul;
+    padding: 2rem 2rem;
+    margin-top: 3rem;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 25% 75%);
+        align-items: center;
+    }
+
+    .cart-icono-contenedor{
+        display: flex;
+        justify-content: center;
+    }
+
+    .cart-icono{
+        width: 10rem;
+        color: $blanco;
+    }
+
+    .cart-texto{
+        color: $blanco;
+    
+        p{
+            color: $blanco;
+            font-size: small;
+        }
+    }
+
+}
+
