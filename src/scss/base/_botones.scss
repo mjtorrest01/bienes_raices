@@ -2,6 +2,10 @@
     @include boton($azul, block);
 }
 
+.boton-azul-inline{
+    @include boton($azul, inline);
+}
+
 .boton-amarillo{
     @include boton($amarillo, inline);
 }
