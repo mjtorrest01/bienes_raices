@@ -1,5 +1,8 @@
 <?php
-    include './includes/templades/header.php';
+
+    require 'includes/funciones.php';
+
+    incluirTemplate('header');
 ?>
 
     <!--!========== FIN HEADER ==========!-->
@@ -106,5 +109,5 @@
 
     <!--!========== FOOTER ==========!-->
     <?php
-    include './includes/templades/footer.php';
-?>
+        incluirTemplate('footer');
+    ?>
