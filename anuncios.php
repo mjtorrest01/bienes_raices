@@ -40,7 +40,7 @@
                             </li>
                         </ul>
 
-                        <a href="anuncio.html" class="boton boton-azul">
+                        <a href="anuncio.php" class="boton boton-azul">
                             Ver Propiedad
                         </a>
                     </div>
@@ -72,7 +72,7 @@
                             </li>
                         </ul>
 
-                        <a href="anuncio.html" class="boton boton-azul">
+                        <a href="anuncio.php" class="boton boton-azul">
                             Ver Propiedad
                         </a>
                     </div>
@@ -104,7 +104,7 @@
                             </li>
                         </ul>
 
-                        <a href="anuncio.html" class="boton boton-azul">
+                        <a href="anuncio.php" class="boton boton-azul">
                             Ver Propiedad
                         </a>
                     </div>
@@ -136,7 +136,7 @@
                             </li>
                         </ul>
 
-                        <a href="anuncio.html" class="boton boton-azul">
+                        <a href="anuncio.php" class="boton boton-azul">
                             Ver Propiedad
                         </a>
                     </div>
@@ -168,7 +168,7 @@
                             </li>
                         </ul>
 
-                        <a href="anuncio.html" class="boton boton-azul">
+                        <a href="anuncio.php" class="boton boton-azul">
                             Ver Propiedad
                         </a>
                     </div>
@@ -200,7 +200,7 @@
                             </li>
                         </ul>
 
-                        <a href="anuncio.html" class="boton boton-azul">
+                        <a href="anuncio.php" class="boton boton-azul">
                             Ver Propiedad
                         </a>
                     </div>

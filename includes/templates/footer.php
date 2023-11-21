@@ -1,10 +1,10 @@
 <footer class="footer seccion">
         <div class="contenedor contenedor_footer">
             <nav class="navegacion">
-                <a href="nosotros.html">Sobre Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contactanos</a>
+                <a href="nosotros.php">Sobre Nosotros</a>
+                <a href="anuncios.php">Anuncios</a>
+                <a href="blog.php">Blog</a>
+                <a href="contacto.php">Contactanos</a>
             </nav>
         </div>
 
