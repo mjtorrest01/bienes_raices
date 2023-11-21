@@ -1,50 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raices</title>
-    <link rel="stylesheet" href="/build/css/app.css">
-</head>
-<body>
-    <!--!========== HEADER ==========!-->
-    <header class="header">
-        <div class="contenedor contenedor-header">
-            <div class="barra">
-                <a href="/">
-                    <img src="build/img/logo.svg" alt="Logotipo de Bienes Raices">
-                </a>
-                <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="icono menu">
-                </div>
+<?php
+    include './includes/templades/header.php';
+?>
 
-                <div class="derecha">
-                    <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="modo oscuro">
-                    <nav class="navegacion">
-                        <a href="nosotros.html">Sobre Nosotros</a>
-                        <a href="anuncios.html">Anuncios</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contacto.html">Contactanos</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
     <!--!========== FIN HEADER ==========!-->
 
     <!--!========== MAIN ==========!-->
     <main class="contenedor seccion contenido-centrado">
-        <h1>Guia para la decoracion de tu hogar</h1>
-
+        <h1>Casa en venta frente al bosque</h1>
         <picture>
-            <source srcset="build/img/destacada2.webp" type="imagen/webp">
-            <source srcset="build/img/destacada2.jpg" type="imagen/jpg">
-            <img loading="lazy" src="build/img/destacada2.jpg" alt="imagen casa">
+            <source srcset="build/img/destacada.webp" type="imagen/webp">
+            <source srcset="build/img/destacada.jpg" type="imagen/jpg">
+            <img loading="lazy" src="build/img/destacada.jpg" alt="imagen casa">
         </picture>
 
-        <p class="info-meta">Escrito el: <span>20/10/2021</span> por: <span>Admin</span></p>
-
         <div class="resumen-propiedad">
+            <p class="precio">$3,000,000</p>
+            <ul class="iconos_caracteristicas">
+                <li>
+                    <img class="icono-anuncio" loading="lazy" src="/build/img/icono_wc.svg" alt="icono wc">
+                    <p>3</p>
+                </li>
+                <li>
+                    <img class="icono-anuncio" loading="lazy" src="/build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                    <p>3</p>
+                </li>
+                <li>
+                    <img class="icono-anuncio" loading="lazy" src="/build/img/icono_dormitorio.svg" alt="icono dormitorio">
+                    <p>4</p>
+                </li>
+            </ul>
+
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perferendis reprehenderit error eos et
                 totam ut alias numquam quasi atque accusantium voluptatem ab quis laborum, adipisci iste voluptatibus 
                 molestiae aut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum neque praesentium fuga, 
