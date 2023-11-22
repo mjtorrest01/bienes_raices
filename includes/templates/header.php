@@ -12,15 +12,15 @@
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
-                    <img src="build/img/logo.svg" alt="Logotipo de Bienes Raices">
+                    <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
 
                 <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="icono menu">
+                    <img src="/build/img/barras.svg" alt="icono menu">
                 </div>
 
                 <div class="derecha">
-                    <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="modo oscuro">
+                    <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="modo oscuro">
                     <nav class="navegacion">
                         <a href="nosotros.php">Sobre Nosotros</a>
                         <a href="anuncios.php">Anuncios</a>
