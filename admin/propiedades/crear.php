@@ -33,6 +33,7 @@
     $wc = $_POST['wc'];
     $estacionamiento = $_POST['estacionamiento'];
     $vendedorId = $_POST['vendedor'];
+    $creado = date('Y/m/d');
 
     if (!$titulo) {
         $errores[] = "Debes añadir un titulo";
@@ -70,12 +71,13 @@
 
     if(empty($errores)){
         // insertar en la BD
-        $query = " INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamiento, vendedores_id ) VALUES ( '$titulo', '$precio', '$descripcion',  '$habitaciones', '$wc', '$estacionamiento', '$vendedorId' )";
+        $query = " INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id ) VALUES ( '$titulo', '$precio', '$descripcion',  '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' )";
 
         $resultado = mysqli_query($db, $query);
 
         if ($resultado){
-            echo "Insertado correctamente";
+            // Redireccionar al usuario 
+            header('location: /admin');
         }
     }
 
