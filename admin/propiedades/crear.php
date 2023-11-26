@@ -99,7 +99,7 @@
         move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
 
         // insertar en la BD
-        $query = " INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id ) VALUES ( '$titulo', '$precio', '$descripcion',  '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' )";
+        $query = " INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id ) VALUES ( '$titulo', '$precio', '$nombreImagen', '$descripcion',  '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' )";
 
         $resultado = mysqli_query($db, $query);
 
