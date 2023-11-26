@@ -87,17 +87,16 @@
         //**Subida de archivos**\\
 
         //Crar la carpeta 
-        $carpetaImagenes = '../../imagenes';
+        $carpetaImagenes = '../../imagenes/';
         if(!is_dir($carpetaImagenes)) {
             mkdir($carpetaImagenes);
         }
 
+        //Generar un nombre unico
+        $nombreImagen = md5( uniqid( rand(), true)) .".jpg";
+
         // subir la imagen 
-        move_uploaded_file($imagen['tmp_name'], $carpetaImagenes .  "/archivo.jpg");
-
-        exit;
-        
-
+        move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
 
         // insertar en la BD
         $query = " INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id ) VALUES ( '$titulo', '$precio', '$descripcion',  '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' )";
