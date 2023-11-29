@@ -13,6 +13,14 @@ if(!$id) {
 
     $db = conectarDB();
 
+    // Obtener los datos de la propiedad
+    $consulta = "SELECT * FROM propiedades WHERE id = $id";
+    $resultado = mysqli_query($db, $consulta);
+    $propiedad = mysqli_fetch_assoc($resultado);
+    echo "<pre>";
+    var_dump($propiedad);
+    echo "</pre>";
+
     // Consultar para obtener los vendedores
     $consulta = "SELECT *FROM vendedores;";
     $resultado = mysqli_query($db, $consulta);
@@ -20,13 +28,14 @@ if(!$id) {
     // arreglo con mensajes de errores
     $errores = [];
 
-    $titulo = '';
-    $precio = '';
-    $descripcion = '';
-    $habitaciones = '';
-    $wc = '';
-    $estacionamiento = '';
-    $vendedorId = '';
+    $titulo = $propiedad['titulo'];
+    $precio = $propiedad['precio'];
+    $descripcion = $propiedad['descripcion'];
+    $habitaciones = $propiedad['habitaciones'];
+    $wc = $propiedad['wc'];
+    $estacionamiento = $propiedad['estacionamiento'];
+    $vendedorId = $propiedad['vendedores_id'];
+    $imagen = $propiedad['imagen'];
 
 
     // ejecuta el codigo despues de que el usuario envia el formulario
@@ -154,6 +163,8 @@ if(!$id) {
 
                 <label for="imagen">Imagen</label>
                 <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png" name="imagen">
+
+                <img src="/imagenes/<?php echo $imagen; ?>" class="imagen-small">
 
                 <label for="descripcion">Descripcion</label>
                 <textarea id="descripcion" name="descripcion"><?php echo $descripcion; ?></textarea>
