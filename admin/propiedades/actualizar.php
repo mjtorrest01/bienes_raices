@@ -40,9 +40,9 @@ if(!$id) {
 
     // ejecuta el codigo despues de que el usuario envia el formulario
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        echo "<pre>";
-        var_dump($_POST);
-        echo "</pre>";
+        // echo "<pre>";
+        // var_dump($_POST);
+        // echo "</pre>";
 
     $titulo = mysqli_real_escape_string( $db, $_POST['titulo']);
     $precio = mysqli_real_escape_string( $db, $_POST['precio']);
@@ -100,20 +100,29 @@ if(!$id) {
     if(empty($errores)){
         //**Subida de archivos**\\
 
-        // //Crar la carpeta 
-        // $carpetaImagenes = '../../imagenes/';
-        // if(!is_dir($carpetaImagenes)) {
-        //     mkdir($carpetaImagenes);
-        // }
+        //Crar la carpeta 
+        $carpetaImagenes = '../../imagenes/';
+        if(!is_dir($carpetaImagenes)) {
+            mkdir($carpetaImagenes);
+        }
 
-        // //Generar un nombre unico
-        // $nombreImagen = md5( uniqid( rand(), true)) .".jpg";
+        $nombreImagen = '';
 
-        // // subir la imagen 
-        // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+        if($imagen['name']) {
+            // Eliminar la imagen previa
+            unlink($carpetaImagenes . $propiedad['imagen']);
+
+            //Generar un nombre unico
+            $nombreImagen = md5( uniqid( rand(), true)) .".jpg";
+
+            // subir la imagen 
+            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+        } else {
+            $nombreImagen = $propiedad['imagen'];
+        }
 
         // insertar en la BD
-        $query = " UPDATE propiedades SET  titulo = '$titulo', precio = '$precio', descripcion = '$descripcion',  habitaciones = $habitaciones, wc = $wc, estacionamiento = $estacionamiento, vendedores_id = $vendedorId WHERE id = $id ";
+        $query = " UPDATE propiedades SET  titulo = '$titulo', precio = '$precio', imagen = '$nombreImagen', descripcion = '$descripcion',  habitaciones = $habitaciones, wc = $wc, estacionamiento = $estacionamiento, vendedores_id = $vendedorId WHERE id = $id ";
 
         //echo $query;
 
